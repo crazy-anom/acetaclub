@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+section {
+    min-height: auto;
+    background: black;
+    padding: 2em 0;
+}
+
+body {
+    perspective: 500px;
+    font-family: sans-serif, monospace;
+    overflow-x: hidden;
+    z-index: 0;
+    position: relative;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.nav-bar {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 4em;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 900;
+    background: linear-gradient(45deg, rgb(0, 4, 255), rgb(0, 255, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgb(0, 255, 255);
+    user-select: none;
+}
+
+.menu {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+    transform: rotate(-180deg);
+    z-index: 12;
+}
+
+.bars {
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    border-radius: 50px;
+    background: linear-gradient(-40deg, rgb(0, 4, 255), rgb(0, 255, 76));
+}
+
+.bars::after,
+.bars::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 30px;
+    transition: .5s;
+    background: linear-gradient(-40deg, rgb(0, 4, 255), rgb(0, 255, 76));
+}
+
+
+.bars::after {
+    margin-top: 8px;
+}
+
+.bars::before {
+    margin-top: -8px;
+}
+
+.nav-bar.active .menu {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.nav-bar.active .bars {
+    display: block;
+    transition: .5s;
+    height: 0;
+}
+
+.nav-bar.active .bars::after {
+    transform: rotate(-45deg);
+    margin-top: -0px;
+    width: 30px;
+    transition: .5s;
+}
+
+.nav-bar.active .bars::before {
+    transform: rotate(45deg);
+    margin-top: 0;
+    transition: .5s;
+}
+
+.menu-item {
+    top: 0;
+    left: 0;
+    position: fixed;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: .5s;
+}
+
+.nav-bar.active .menu-item {
+    transition: .5s;
+    transform: translateX(0);
+    background-color: rgb(31, 31, 31);
+}
+
+.menu-item li {
+    list-style: none;
+}
+
+.menu-item a {
+    text-decoration: none;
+    transition: .5s;
+    background: linear-gradient(-45deg, rgb(0, 4, 255), rgb(0, 255, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-item a:hover {
+    transition: .5s;
+    text-decoration: none;
+    background: linear-gradient(-45deg, rgba(0, 4, 255, 0.651), rgba(0, 255, 76, 0.637));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (min-width:600px) {
+    .menu-item{
+        flex-direction: row;
+        transform: translate(0);
+        height: unset;
+        width: unset;
+        gap: 1.5em;
+        position: relative;
+    }
+    .menu{
+        display: none;
+    }
+}
+footer{
+    background: black;
+    padding: 2em 0;
+    position: relative;
+}
+
+
+
+.box:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(360deg, rgb(0, 4, 255), rgb(0, 255, 76));
+    transform: translate3d(0px, -2px, 0) scale(1);
+    filter: blur(40px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+
+.box p{
+    z-index: 2;
+    color: white;
+    position: relative;
+    font-size: 12px;
+    text-shadow:0 0 20px rgb(0, 191, 255) ;
+    text-align: center;
+}
+
+.header.scrolled{
+    height: 1em;
+}
+.header.scrolled .nav-bar{
+    transition: 1s;
+    background: rgba(88, 88, 88, 0.89);
+    padding: 1em 4em ;
+}

@@ -1,0 +1,22 @@
+@media (min-width:600px) {
+    .container-1{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .container-1 .left{
+        display: none;
+    }
+    .container-1 .right{
+        margin: 30px;
+    }
+    .container-1 .right h1{
+        font-size: 6vh;
+        animation: titleani 1s linear infinite;
+        display: block;
+    }
+    .container p{
+        width: calc(150%/2);
+    }
+}
+

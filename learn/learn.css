@@ -1,0 +1,71 @@
+.container{
+    text-align: center;
+}
+.container h4{
+    color: white;
+    text-shadow: 0 0 20px rgb(0, 255, 242);
+    background: linear-gradient(-45deg, rgb(0, 4, 255), rgb(0, 255, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5em;
+    padding: 2em 0;
+}
+.container h4 span{
+    color: white;
+    text-shadow: 0 0 20px rgb(0, 255, 242);
+    background: linear-gradient(45deg, rgb(0, 255, 242), rgb(0, 255, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: learning .5s linear infinite; 
+}
+
+@keyframes learning {
+    25%{
+        background: linear-gradient(45deg, rgb(0, 255, 242), rgb(0, 255, 76));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: linear-gradient(-45deg, rgb(0, 255, 21), rgb(0, 255, 76));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    75%{
+        background: linear-gradient(45deg, rgb(0, 255, 242), rgb(0, 255, 76));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.container h6{
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 0 20px rgb(0, 255, 242);
+    background: linear-gradient(45deg, rgb(0, 255, 242), rgb(0, 255, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: learning .5s linear infinite; 
+}
+
+iframe{
+    border-radius: 10px;
+}
+.learnspot{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-around;
+}
+.learnspot p{
+    width: 100%;
+    font-size: .8em;
+    padding: 2em 0;
+}
+.div{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

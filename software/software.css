@@ -1,0 +1,51 @@
+.software{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    background:linear-gradient(45deg, rgb(0, 4, 255), rgb(0, 255, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgb(0, 191, 255);
+    padding: 1em 0;
+}
+p{
+    text-shadow: 0 0 20px rgb(0, 191, 255);
+    padding: 2em 5em;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+
+.rounded-md{
+    position: relative;
+    color: black;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, rgb(0, 4, 255), rgb(0, 255, 76));
+    padding: .5em 1.4em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgb(0, 191, 255);
+    margin: 0 1em;
+}
+
+.software-container{
+    padding: 2em 0;
+}
+
+.sub-title{
+    position: relative;
+    color: black;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, rgb(0, 225, 255), rgb(123, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgb(0, 191, 255);
+    padding: 1em 0;
+}
